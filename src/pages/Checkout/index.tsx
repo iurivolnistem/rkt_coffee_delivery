@@ -13,6 +13,8 @@ import {
   FormContainer,
   PaymentContainer,
   PaymentActionsContainer,
+  CartContainer,
+  CompleteOrderButton,
 } from './styles'
 
 export function Checkout() {
@@ -59,6 +61,24 @@ export function Checkout() {
       </div>
       <div>
         <Title>Cafés selecionados</Title>
+        <CartContainer>
+          <div></div>
+          <div>
+            <div>
+              <p>Total de itens</p>
+              <span>R$ 29,70</span>
+            </div>
+            <div>
+              <p>Entrega</p>
+              <span>R$ 3,50</span>
+            </div>
+            <div>
+              <p>Total</p>
+              <span>R$ 33,50</span>
+            </div>
+            <CompleteOrderButton>Confirmar pedido</CompleteOrderButton>
+          </div>
+        </CartContainer>
       </div>
     </CheckoutContainer>
   )

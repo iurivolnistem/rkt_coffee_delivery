@@ -6,7 +6,6 @@ export const CheckoutContainer = styled.main`
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
 `
-
 export const Title = styled.h1`
   font-size: 1.125rem;
   color: ${(props) => props.theme['brown-700']};
@@ -25,7 +24,6 @@ export const AddressCard = styled(CardDefault)`
     color: ${(props) => props.theme['yellow-500']};
   }
 `
-
 export const MessageContainer = styled.div`
   display: flex;
   align-items: flex-start;
@@ -45,7 +43,6 @@ export const MessageContainer = styled.div`
     }
   }
 `
-
 export const FormContainer = styled.div``
 
 export const PaymentContainer = styled(CardDefault)`
@@ -53,7 +50,6 @@ export const PaymentContainer = styled(CardDefault)`
     color: ${(props) => props.theme['purple-300']};
   }
 `
-
 export const PaymentActionsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -80,4 +76,26 @@ export const PaymentActionsContainer = styled.div`
       color: ${(props) => props.theme['brown-700']};
     }
   }
+`
+export const CartContainer = styled.div`
+  margin-top: 1rem;
+  padding: 2.5rem;
+  background: ${(props) => props.theme['gray-300']};
+  border-radius: 6px;
+  border-top-right-radius: 2.75rem;
+  border-bottom-left-radius: 2.75rem;
+`
+
+export const CompleteOrderButton = styled.button`
+  width: 100%;
+  margin-top: 1.5rem;
+  padding: 0.75rem 0.5rem;
+  border: none;
+  border-radius: 6px;
+  color: ${(props) => props.theme.white};
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1.6;
+  font-size: 0.875rem;
+  background: ${(props) => props.theme['yellow-300']};
 `
