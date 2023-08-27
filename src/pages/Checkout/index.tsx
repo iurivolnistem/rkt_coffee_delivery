@@ -4,18 +4,30 @@ import {
   CreditCard,
   Bank,
   Money,
+  Trash,
+  Minus,
+  Plus,
 } from '@phosphor-icons/react'
 import {
   CheckoutContainer,
   Title,
+  TextBoldLarge,
   AddressCard,
   MessageContainer,
   FormContainer,
   PaymentContainer,
   PaymentActionsContainer,
   CartContainer,
+  CartItem,
+  ItemContainer,
+  ItemActionsContainer,
+  CartInformationsContainer,
   CompleteOrderButton,
+  RemoveItemButton,
+  ItemsCountContainer,
 } from './styles'
+
+import expressoTradicional from '../../assets/coffees/ExpressoTradicional.svg'
 
 export function Checkout() {
   return (
@@ -62,22 +74,79 @@ export function Checkout() {
       <div>
         <Title>Cafés selecionados</Title>
         <CartContainer>
-          <div></div>
           <div>
+            <CartItem>
+              <ItemContainer>
+                <img
+                  src={expressoTradicional}
+                  alt="Imagem de um café expresso tradicional"
+                  width={64}
+                />
+                <div>
+                  <p>Expresso Tradicional</p>
+                  <ItemActionsContainer>
+                    <ItemsCountContainer>
+                      <button>
+                        <Minus size={16} />
+                      </button>
+                      <span>1</span>
+                      <button>
+                        <Plus size={16} />
+                      </button>
+                    </ItemsCountContainer>
+                    <RemoveItemButton>
+                      <Trash size={16} />
+                      Remover
+                    </RemoveItemButton>
+                  </ItemActionsContainer>
+                </div>
+              </ItemContainer>
+              <span>R$ 9,90</span>
+            </CartItem>
+            <CartItem>
+              <ItemContainer>
+                <img
+                  src={expressoTradicional}
+                  alt="Imagem de um café expresso tradicional"
+                  width={64}
+                />
+                <div>
+                  <p>Expresso Tradicional</p>
+                  <ItemActionsContainer>
+                    <ItemsCountContainer>
+                      <button>
+                        <Minus size={16} />
+                      </button>
+                      <span>1</span>
+                      <button>
+                        <Plus size={16} />
+                      </button>
+                    </ItemsCountContainer>
+                    <RemoveItemButton>
+                      <Trash size={16} />
+                      Remover
+                    </RemoveItemButton>
+                  </ItemActionsContainer>
+                </div>
+              </ItemContainer>
+              <span>R$ 9,90</span>
+            </CartItem>
+          </div>
+          <CartInformationsContainer>
             <div>
-              <p>Total de itens</p>
+              <span>Total itens</span>
               <span>R$ 29,70</span>
             </div>
             <div>
-              <p>Entrega</p>
+              <span>Entrega</span>
               <span>R$ 3,50</span>
             </div>
             <div>
-              <p>Total</p>
-              <span>R$ 33,50</span>
+              <TextBoldLarge>Total</TextBoldLarge>
+              <TextBoldLarge>R$ 33,20</TextBoldLarge>
             </div>
             <CompleteOrderButton>Confirmar pedido</CompleteOrderButton>
-          </div>
+          </CartInformationsContainer>
         </CartContainer>
       </div>
     </CheckoutContainer>

@@ -13,6 +13,28 @@ export const Title = styled.h1`
   font-family: 'Baloo 2', sans-serif;
   line-height: 1.3;
 `
+export const TextRegularSmall = styled.h6`
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.3;
+  color: ${(props) => props.theme['brown-500']};
+`
+
+export const TextRegularMedium = styled.span`
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: ${(props) => props.theme['brown-500']};
+`
+
+export const TextBoldLarge = styled.span`
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: ${(props) => props.theme['brown-700']};
+`
+
 const CardDefault = styled.div`
   margin-top: 1rem;
   padding: 2.5rem;
@@ -84,6 +106,79 @@ export const CartContainer = styled.div`
   border-radius: 6px;
   border-top-right-radius: 2.75rem;
   border-bottom-left-radius: 2.75rem;
+`
+export const CartItem = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid ${(props) => props.theme['gray-700']};
+
+  &:first-child {
+    padding-top: 0;
+  }
+`
+export const ItemContainer = styled.div`
+  display: flex;
+  gap: 1.25rem;
+
+  p {
+    margin-bottom: 0.5rem;
+  }
+`
+
+export const ItemActionsContainer = styled.div`
+  display: flex;
+  gap: 0.5rem;
+`
+
+export const ItemsCountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  background: ${(props) => props.theme['gray-700']};
+  border-radius: 6px;
+  font-size: 1rem;
+  line-height: 1.3;
+  color: ${(props) => props.theme['brown-900']};
+
+  button {
+    display: flex;
+    align-items: center;
+    color: ${(props) => props.theme['purple-300']};
+    border: 0;
+  }
+`
+
+export const RemoveItemButton = styled.button`
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: 0;
+  background: ${(props) => props.theme['gray-700']};
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: ${(props) => props.theme['brown-500']};
+  text-transform: uppercase;
+
+  svg {
+    color: ${(props) => props.theme['purple-300']};
+  }
+`
+
+export const CartInformationsContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+
+  div {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.75rem;
+  }
 `
 
 export const CompleteOrderButton = styled.button`
