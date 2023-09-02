@@ -42,8 +42,22 @@ export function Checkout() {
               <span>Informe o endereço onde deseja receber seu pedido</span>
             </p>
           </MessageContainer>
-          <FormContainer>
-            <form action=""></form>
+          <FormContainer action="">
+            <div>
+              <input type="text" placeholder="CEP" />
+            </div>
+            <div>
+              <input type="text" placeholder="Rua" />
+            </div>
+            <div>
+              <input type="text" placeholder="Número" />
+              <input type="text" placeholder="Complemento" />
+            </div>
+            <div>
+              <input type="text" placeholder="Bairro" />
+              <input type="text" placeholder="Cidade" />
+              <input type="text" placeholder="UF" />
+            </div>
           </FormContainer>
         </AddressCard>
         <PaymentContainer>

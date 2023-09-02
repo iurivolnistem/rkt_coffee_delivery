@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const CheckoutContainer = styled.main`
-  padding: 0 10rem;
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 2rem;
@@ -65,7 +64,32 @@ export const MessageContainer = styled.div`
     }
   }
 `
-export const FormContainer = styled.div``
+export const FormContainer = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  div {
+    flex: 1;
+    gap: 0.75rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    &:first-child {
+      width: 50%;
+    }
+
+    input {
+      flex: 1;
+      background: ${(props) => props.theme['gray-500']};
+      padding: 0.75rem;
+      border: none;
+      border: 1px solid ${(props) => props.theme['gray-700']};
+      color: ${(props) => props.theme['brown-300']};
+    }
+  }
+`
 
 export const PaymentContainer = styled(CardDefault)`
   svg {
