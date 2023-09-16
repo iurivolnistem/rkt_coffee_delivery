@@ -34,11 +34,13 @@ interface CartContextType {
   HandleRemoveProductFromCart: (id: number) => void
   CreateNewOrder: (data: NewOrderInputs) => Promise<AxiosResponse>
   resetStateOfProducts: () => void
+  order: Order | undefined
 }
 
 export const CartContext = createContext({} as CartContextType)
 
 export function CartContextProvider({ children }: CartContextProps) {
+  const [order, setOrder] = useState<Order>()
   const [products, setProducts] = useState<ProductOrder[]>([])
 
   function HandleAddNewItemToCart(data: ProductOrder) {
@@ -104,6 +106,8 @@ export function CartContextProvider({ children }: CartContextProps) {
       order: newOrder,
     })
 
+    setOrder(newOrder)
+
     return response
   }
 
@@ -119,6 +123,7 @@ export function CartContextProvider({ children }: CartContextProps) {
         HandleRemoveProductFromCart,
         CreateNewOrder,
         resetStateOfProducts,
+        order,
       }}
     >
       {children}
