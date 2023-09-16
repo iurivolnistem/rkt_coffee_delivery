@@ -120,4 +120,5 @@ export const ProductAddToCart = styled.button`
   padding: 0.5rem;
   border-radius: 6px;
   color: ${(props) => props.theme.white};
+  cursor: pointer;
 `

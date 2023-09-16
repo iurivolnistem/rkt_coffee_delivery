@@ -11,15 +11,17 @@ import {
 } from './styles'
 import { IProductItem } from '../../interface/Product'
 import { CurrencyFormatter } from '../../utils/formatter'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
+import { CartContext } from '../../context/CartContext'
 
 interface ProductItemProps {
   product: IProductItem
 }
 
 export function ProductItem({ product }: ProductItemProps) {
+  const { HandleAddNewItemToCart } = useContext(CartContext)
   const [quantity, setQuantity] = useState(0)
-  const { description, name, price, tags, imagem } = product
+  const { id, description, name, price, tags, imagem } = product
 
   function increaseQuantity() {
     if (quantity < 5) {
@@ -32,6 +34,20 @@ export function ProductItem({ product }: ProductItemProps) {
   function decreaseQuantity() {
     if (quantity > 0) {
       setQuantity((state) => (state -= 1))
+    }
+  }
+
+  function AddNewItemToCart() {
+    if (quantity > 0) {
+      HandleAddNewItemToCart({
+        description,
+        id,
+        imagem,
+        name,
+        price,
+        quantity,
+        tags,
+      })
     }
   }
 
@@ -61,7 +77,7 @@ export function ProductItem({ product }: ProductItemProps) {
               <Plus width={14} />
             </button>
           </ProductQuantityContainer>
-          <ProductAddToCart>
+          <ProductAddToCart onClick={AddNewItemToCart}>
             <ShoppingCart weight="fill" width={19} />
           </ProductAddToCart>
         </div>

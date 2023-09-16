@@ -1,16 +1,13 @@
+import * as RadioGroup from '@radix-ui/react-radio-group'
 import styled from 'styled-components'
 
-export const CheckoutContainer = styled.main`
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-`
 export const Title = styled.h1`
   font-size: 1.125rem;
   color: ${(props) => props.theme['brown-700']};
   font-weight: 700;
   font-family: 'Baloo 2', sans-serif;
   line-height: 1.3;
+  margin-bottom: 1rem;
 `
 export const TextRegularSmall = styled.h6`
   font-family: 'Roboto', sans-serif;
@@ -19,26 +16,27 @@ export const TextRegularSmall = styled.h6`
   line-height: 1.3;
   color: ${(props) => props.theme['brown-500']};
 `
-
 export const TextRegularMedium = styled.span`
   font-family: 'Roboto', sans-serif;
   font-size: 1rem;
   line-height: 1.3;
   color: ${(props) => props.theme['brown-500']};
 `
-
 export const TextBoldLarge = styled.span`
   font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: ${(props) => props.theme['brown-700']};
 `
-
 const CardDefault = styled.div`
-  margin-top: 1rem;
-  padding: 2.5rem;
-  background: ${(props) => props.theme['gray-300']};
-  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+
+  & > div {
+    padding: 2.5rem;
+    border-radius: 6px;
+    background: ${(props) => props.theme['gray-300']};
+  }
 `
 export const AddressCard = styled(CardDefault)`
   svg {
@@ -65,6 +63,12 @@ export const MessageContainer = styled.div`
   }
 `
 export const FormContainer = styled.form`
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+`
+export const FormInputGroupContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -96,40 +100,51 @@ export const PaymentContainer = styled(CardDefault)`
     color: ${(props) => props.theme['purple-300']};
   }
 `
-export const PaymentActionsContainer = styled.div`
+export const PaymentActionsContainer = styled(RadioGroup.Root)`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 0.75rem;
+`
 
-  button {
-    padding: 1rem;
-    border: 0;
-    gap: 0.75rem;
-    display: flex;
-    align-items: center;
-    background: ${(props) => props.theme['gray-700']};
-    border-radius: 6px;
-    font-size: 0.75rem;
-    line-height: 1.6;
-    text-transform: uppercase;
-    color: ${(props) => props.theme['brown-500']};
-    transition: background 0.1s;
+export const PaymentTypeButton = styled(RadioGroup.Item)`
+  padding: 1rem;
+  border: 0;
+  gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  background: ${(props) => props.theme['gray-700']};
+  border-radius: 6px;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  text-transform: uppercase;
+  color: ${(props) => props.theme['brown-500']};
+  transition: background 0.1s;
+  border: 1px solid transparent;
 
-    &:hover {
-      cursor: pointer;
-      background: ${(props) => props.theme['brown-100']};
-      color: ${(props) => props.theme['brown-700']};
-    }
+  &[data-state='unchecked']:hover {
+    cursor: pointer;
+    background: ${(props) => props.theme['brown-100']};
+    color: ${(props) => props.theme['brown-700']};
+  }
+
+  &[data-state='checked'] {
+    background: ${(props) => props.theme['purple-100']};
+    border: 1px solid ${(props) => props.theme['purple-300']};
   }
 `
+
 export const CartContainer = styled.div`
-  margin-top: 1rem;
-  padding: 2.5rem;
-  background: ${(props) => props.theme['gray-300']};
-  border-radius: 6px;
-  border-top-right-radius: 2.75rem;
-  border-bottom-left-radius: 2.75rem;
+  display: flex;
+  flex-direction: column;
+
+  & > div {
+    padding: 2.5rem;
+    background: ${(props) => props.theme['gray-300']};
+    border-radius: 6px;
+    border-top-right-radius: 2.75rem;
+    border-bottom-left-radius: 2.75rem;
+  }
 `
 export const CartItem = styled.div`
   display: flex;
@@ -167,10 +182,16 @@ export const ItemsCountContainer = styled.div`
   color: ${(props) => props.theme['brown-900']};
 
   button {
-    display: flex;
-    align-items: center;
-    color: ${(props) => props.theme['purple-300']};
+    background: transparent;
     border: 0;
+    line-height: 0;
+    color: ${(props) => props.theme['purple-300']};
+    cursor: pointer;
+
+    &:hover {
+      color: ${(props) => props.theme['purple-500']};
+      transition: color 0.2s;
+    }
   }
 `
 
@@ -186,6 +207,12 @@ export const RemoveItemButton = styled.button`
   line-height: 1.6;
   color: ${(props) => props.theme['brown-500']};
   text-transform: uppercase;
+  cursor: pointer;
+
+  &:hover {
+    background: ${(props) => props.theme['brown-100']};
+    transition: background-color 0.2s;
+  }
 
   svg {
     color: ${(props) => props.theme['purple-300']};
@@ -217,4 +244,14 @@ export const CompleteOrderButton = styled.button`
   line-height: 1.6;
   font-size: 0.875rem;
   background: ${(props) => props.theme['yellow-300']};
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  &:not(:disabled):hover {
+    background: ${(props) => props.theme['yellow-500']};
+    transition: background-color 0.2s;
+  }
 `

@@ -1,224 +1,452 @@
 {
-    "coffees":[
+  "coffees": [
+    {
+      "id": 1,
+      "name": "Expresso Tradicional",
+      "description": "O tradicional café feito com água quente e grãos moídos",
+      "price": 9.9,
+      "tags": [
         {
-            "id": 1,
-            "name": "Expresso Tradicional",
-            "description": "O tradicional café feito com água quente e grãos moídos",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                }
-            ],
-            "imagem":"src/assets/coffees/ExpressoTradicional.svg"
-        },
-        {
-            "id": 2,
-            "name": "Expresso Americano",
-            "description": "Expresso diluído, menos intenso que o tradicional",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                }
-            ],
-            "imagem":"src/assets/coffees/ExpressoAmericano.svg"
-        },
-        {
-            "id": 3,
-            "name": "Expresso Cremoso",
-            "description": "Café expresso tradicional com espuma cremosa",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                }
-            ],
-            "imagem":"src/assets/coffees/ExpressoCremoso.svg"
-        },
-        {
-            "id": 4,
-            "name": "Expresso Gelado",
-            "description": "Bebida preparada com café expresso e cubos de gelo",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                },
-                {
-                    "name": "Gelado"
-                }
-            ],
-            "imagem":"src/assets/coffees/ExpressoGelado.svg"
-        },
-        {
-            "id": 5,
-            "name": "Café com Leite",
-            "description": "Meio a meio de expresso tradicional com leite vaporizado",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                },
-                {
-                    "name": "Com Leite"
-                }
-            ],
-            "imagem":"src/assets/coffees/CafeLeite.svg"
-        },
-        {
-            "id": 6,
-            "name": "Latte",
-            "description": "Uma dose de café expresso com o dobro de leite e espuma cremosa",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                },
-                {
-                    "name": "Com Leite"
-                }
-            ],
-            "imagem":"src/assets/coffees/Latte.svg"
-        },
-        {
-            "id": 7,
-            "name": "Capuccino",
-            "description": "Bebida com canela feita de doses iguais de café, leite e espuma",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                },
-                {
-                    "name": "Com Leite"
-                }
-            ],
-            "imagem":"src/assets/coffees/Capuccino.svg"
-        },
-        {
-            "id": 8,
-            "name": "Macchiato",
-            "description": "Café expresso misturado com um pouco de leite quente e espuma",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                },
-                {
-                    "name": "Com Leite"
-                }
-            ],
-            "imagem":"src/assets/coffees/Macchiato.svg"
-        },
-        {
-            "id": 9,
-            "name": "Mocaccino",
-            "description": "Café expresso com calda de chocolate, pouco leite e espuma",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Tradicional"
-                },
-                {
-                    "name": "Com Leite"
-                }
-            ],
-            "imagem":"src/assets/coffees/Mocaccino.svg"
-        },
-        {
-            "id": 10,
-            "name": "Chocolate Quente",
-            "description": "Bebida feita com chocolate dissolvido no leite quente e café",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Especial"
-                },
-                {
-                    "name": "Com Leite"
-                }
-            ],
-            "imagem":"src/assets/coffees/ChocolateQuente.svg"
-        },
-        {
-            "id": 11,
-            "name": "Cubano",
-            "description": "Drink gelado de café expresso com rum, creme de leite e hortelã",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Especial"
-                },
-                {
-                    "name": "Alcoólico"
-                },
-                {
-                    "name": "Gelado"
-                }
-            ],
-            "imagem":"src/assets/coffees/Cubano.svg"
-        },
-        {
-            "id": 12,
-            "name": "Havaiano",
-            "description": "Bebida adocicada preparada com café e leite de coco",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Especial"
-                }
-            ],
-            "imagem":"src/assets/coffees/Havaiano.svg"
-        },
-        {
-            "id": 13,
-            "name": "Árabe",
-            "description": "Bebida preparada com grãos de café árabe e especiarias",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Especial"
-                }
-            ],
-            "imagem":"src/assets/coffees/Arabe.svg"
-        },
-        {
-            "id": 14,
-            "name": "Irlandês",
-            "description": "Bebida a base de café, uísque irlandês, açúcar e chantilly",
-            "price": 9.90,
-            "tags": [
-                {
-                    "name": "Especial"
-                },
-                {
-                    "name": "Alcoólico"
-                }
-            ],
-            "imagem":"src/assets/coffees/Irlandes.svg"
+          "name": "Tradicional"
         }
-    ],
-    "order": {
-        "address": {},
-        "products":[
-            {
-                "id": 14,
-                "name": "Irlandês",
-                "description": "Bebida a base de café, uísque irlandês, açúcar e chantilly",
-                "price": 9.90,
-                "tags": [
-                    {
-                        "name": "Especial"
-                    },
-                    {
-                        "name": "Alcoólico"
-                    }
-                ],
-                "imagem":"src/assets/coffees/Irlandes.svg",
-                "quantity": 1 
-            }
-        ]
-        "payment": "Cartão de crédito"
+      ],
+      "imagem": "src/assets/coffees/ExpressoTradicional.svg"
+    },
+    {
+      "id": 2,
+      "name": "Expresso Americano",
+      "description": "Expresso diluído, menos intenso que o tradicional",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        }
+      ],
+      "imagem": "src/assets/coffees/ExpressoAmericano.svg"
+    },
+    {
+      "id": 3,
+      "name": "Expresso Cremoso",
+      "description": "Café expresso tradicional com espuma cremosa",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        }
+      ],
+      "imagem": "src/assets/coffees/ExpressoCremoso.svg"
+    },
+    {
+      "id": 4,
+      "name": "Expresso Gelado",
+      "description": "Bebida preparada com café expresso e cubos de gelo",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        },
+        {
+          "name": "Gelado"
+        }
+      ],
+      "imagem": "src/assets/coffees/ExpressoGelado.svg"
+    },
+    {
+      "id": 5,
+      "name": "Café com Leite",
+      "description": "Meio a meio de expresso tradicional com leite vaporizado",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        },
+        {
+          "name": "Com Leite"
+        }
+      ],
+      "imagem": "src/assets/coffees/CafeLeite.svg"
+    },
+    {
+      "id": 6,
+      "name": "Latte",
+      "description": "Uma dose de café expresso com o dobro de leite e espuma cremosa",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        },
+        {
+          "name": "Com Leite"
+        }
+      ],
+      "imagem": "src/assets/coffees/Latte.svg"
+    },
+    {
+      "id": 7,
+      "name": "Capuccino",
+      "description": "Bebida com canela feita de doses iguais de café, leite e espuma",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        },
+        {
+          "name": "Com Leite"
+        }
+      ],
+      "imagem": "src/assets/coffees/Capuccino.svg"
+    },
+    {
+      "id": 8,
+      "name": "Macchiato",
+      "description": "Café expresso misturado com um pouco de leite quente e espuma",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        },
+        {
+          "name": "Com Leite"
+        }
+      ],
+      "imagem": "src/assets/coffees/Macchiato.svg"
+    },
+    {
+      "id": 9,
+      "name": "Mocaccino",
+      "description": "Café expresso com calda de chocolate, pouco leite e espuma",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Tradicional"
+        },
+        {
+          "name": "Com Leite"
+        }
+      ],
+      "imagem": "src/assets/coffees/Mocaccino.svg"
+    },
+    {
+      "id": 10,
+      "name": "Chocolate Quente",
+      "description": "Bebida feita com chocolate dissolvido no leite quente e café",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Especial"
+        },
+        {
+          "name": "Com Leite"
+        }
+      ],
+      "imagem": "src/assets/coffees/ChocolateQuente.svg"
+    },
+    {
+      "id": 11,
+      "name": "Cubano",
+      "description": "Drink gelado de café expresso com rum, creme de leite e hortelã",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Especial"
+        },
+        {
+          "name": "Alcoólico"
+        },
+        {
+          "name": "Gelado"
+        }
+      ],
+      "imagem": "src/assets/coffees/Cubano.svg"
+    },
+    {
+      "id": 12,
+      "name": "Havaiano",
+      "description": "Bebida adocicada preparada com café e leite de coco",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Especial"
+        }
+      ],
+      "imagem": "src/assets/coffees/Havaiano.svg"
+    },
+    {
+      "id": 13,
+      "name": "Árabe",
+      "description": "Bebida preparada com grãos de café árabe e especiarias",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Especial"
+        }
+      ],
+      "imagem": "src/assets/coffees/Arabe.svg"
+    },
+    {
+      "id": 14,
+      "name": "Irlandês",
+      "description": "Bebida a base de café, uísque irlandês, açúcar e chantilly",
+      "price": 9.9,
+      "tags": [
+        {
+          "name": "Especial"
+        },
+        {
+          "name": "Alcoólico"
+        }
+      ],
+      "imagem": "src/assets/coffees/Irlandes.svg"
     }
+  ],
+  "orders": [
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani ",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T03:53:43.692Z"
+      },
+      "id": 1
+    },
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T03:56:20.308Z"
+      },
+      "id": 2
+    },
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T03:57:27.587Z"
+      },
+      "id": 3
+    },
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T03:58:39.564Z"
+      },
+      "id": 4
+    },
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T03:58:55.397Z"
+      },
+      "id": 5
+    },
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T04:04:59.371Z"
+      },
+      "id": 6
+    },
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T04:07:28.533Z"
+      },
+      "id": 7
+    },
+    {
+      "order": {
+        "deliveryAddress": {
+          "zipcode": "19026675",
+          "street": "Rua Cerata Donzeli Bongiovani",
+          "number": 862,
+          "complement": "",
+          "neighborhood": "Jardim Novo Bongiovani",
+          "city": "Presidente Prudente",
+          "paymentType": "money",
+          "state": "SP"
+        },
+        "products": [
+          {
+            "description": "Expresso diluído, menos intenso que o tradicional",
+            "id": 2,
+            "imagem": "src/assets/coffees/ExpressoAmericano.svg",
+            "name": "Expresso Americano",
+            "price": 9.9,
+            "quantity": 1,
+            "tags": [
+              {
+                "name": "Tradicional"
+              }
+            ]
+          }
+        ],
+        "createdAt": "2023-09-16T04:09:35.728Z"
+      },
+      "id": 8
+    }
+  ]
 }
