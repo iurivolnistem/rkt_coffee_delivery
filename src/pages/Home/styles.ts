@@ -84,4 +84,8 @@ export const ProductsList = styled.div`
   flex-wrap: wrap;
   margin-bottom: 9rem;
   gap: 2rem;
+
+  @media (min-width: 1920px) {
+    gap: 1rem;
+  }
 `
